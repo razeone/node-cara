@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>parecidosOjos</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+	<div id="main-content">
+		
+		<div class='blur-background' style='display:none'>
+		
+		</div>
+
+		<div id='black-background' style='display:none;'></div>
+		<div id='black-background2' style='display:none;'></div>
+		<div id='flash-background' style='display:none;'></div>
+		<div id='app-background'></div>
+			<div class='boton-terminar'>
+				<img id='logout' class='terminar-esquina' src="../assets_finales/salida1.png" style='display:none'>				
+			</div>
+		<div id='sigues-ahi' style='display:none; z-index:6;'>
+			<!--<canvas id='timer1' style='display:none'></canvas>-->
+
+
+			<div id="timer1" data-timer="10"></div>
+			<span class='fuente5' style='display:none'>¿Sigues ahí? Toca para continuar.</span>
+		</div>
+
+		<div id='salir' style='display:none; z-index:4;'>
+			<span class='fuente5'>¿Seguro que quieres salir?</span>
+			
+			<div id='eleccion'>
+				<img id='si' src="../assets_finales/si1.png">
+				<img id='no' src="../assets_finales/no1.png">
+			</div>
+		</div>
+
+		<div id="s-inicial" class="screen">
+			<canvas id='personaje-animado'></canvas>
+
+			<div id="titulo" style='display:none'>
+				<img src="../assets/titulo_ojos.png">
+			</div>
+			<div class="icono-rfid" style='display:none'>
+				<img src="../assets_finales/rfid.png">
+			</div>
+			<span id='pasa_aqui' class='icono-rfid' style='display:none'>Pasa aquí tu brazalete.</span>
+		</div>
+		
+		<div id="concepto">
+				<!--<p>Tus ojos son únicos, compáralos con otros eligiento de un grupo o invitando a un amigo.</p>-->
+				<img id='instruccion' src="../assets_finales/overlay.png">
+				
+				<img id="continuar_1" src="../assets_finales/continuar_ov1.png">
+				
+		</div>
+		<div id="s-elige" class="screen">
+			<img id='flechita' src="../assets/flecha_35_50.png" style='display:none'>
+
+			<!--<div class='boton-terminar'>
+				<img class='terminar-esquina' src="../assets/cerrar-ws1_66_66.png" style='display:none'>				
+			</div>-->
+			<div id="contenido">
+				<div id="hola">
+					<div id="texto-elige">
+						<h2></h2>
+					</div>
+					<div class='nombres'>
+						<div class='nom1'>
+							<span class='fuente2'>Jean</span>
+						</div>
+						<div class='nom2'>
+							<span class='fuente2'></span>
+						</div>
+					</div>
+					<div id="caras" style='display:none'>
+						<div id="cara1">
+							<div id="face1" class="acomodo_cara circular"><img src='../img/faces/face.jpg'class="circular2"></div>
+							
+						</div>
+						<div id="plus-img">
+							<img src="../assets/mas_90_90.png">
+						</div>
+						<div id="cara2">
+							<div id="face2" class="acomodo_cara circular">
+								<img id='ojo2' src="../assets/elige-parecidos_608_608.png" class='circular2'>
+							</div>
+							
+						</div>
+					</div>
+					<div id="boton1" style="display:none">
+						<img src="../assets_finales/continuar1.png">
+					</div>
+				</div> <!---->
+				<div id="lista">
+					
+					<div id="lista-usuarios" style='display:none'>
+						<div id='comparate-text'>
+							<img src="../assets/comparate.png">
+						</div>
+						<div id="wrapper"></div>
+					</div>
+					<div id="invita-amigo" style='display:none'>
+						
+						<div id='barrita'>
+							<img src="../assets/linea-parecidos_96_2.png">
+						</div>
+						<div id='invita-text'>
+							<img src="../assets/invita.png">
+						</div>
+						<div id='scan-rfid'>
+							<img src="../assets_finales/rfid_amigo.png">
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="s-zoom" class="screen">
+			<!--<div class='boton-terminar'>
+				<img class='terminar-esquina' src="../assets/cerrar-ws1_66_66.png" style='display:none'>				
+			</div>-->
+			<div id="texto-usa">
+				<img id='inst5' src="../assets/intrucción-parecidos1_784_98.png" style='display:none'>
+			</div>
+			<div class='nombres' style='display:none'>
+				<div class='nom1'>
+					<span class='fuente2'>Jean</span>
+				</div>
+				<div class='nom2'>
+					<span class='fuente2'>Danny</span>
+				</div>
+			</div>
+			<div id="interaccion" ondragover="event.preventDefault()">
+				<div id="ojos" style='display:none'>
+					<div id="ojoizq-wrap" class='circular'>
+						<canvas id="canvas-izq" class="circular"></canvas>
+					</div>	
+					<div id="ojoder-wrap" class='circular'>
+						<canvas id="canvas-der" class="circular"></canvas>
+					</div>					
+				</div>
+				<div id='inst4' style='display:none'>
+					<span class='fuente2' style='font-size:2vw;'>Desliza para acercarte.</span>
+				</div>
+				
+				<img id='slider' src="../assets_finales/bolaslider.png" style='display:none'>
+				<img id='barra' src="../assets_finales/barraslider.png" style='display:none'>
+				
+				<img id="terminar" src='../assets_finales/terminar1.png' style='display:none'>
+				<img id='manita' src="../assets_finales/mano.png" style='display:none'>
+				<div id='toca_terminar' style='display:none'>
+					<span class='fuente5'>Toca "Terminar" para dejar la actividad.</span>
+				</div>
+			
+			</div>
+		</div>
+
+		<div id="s-final" class="screen">
+
+			<div id="texto-final" style='display:none'>
+				<span class='fuente2' style='font-size:3.5vw;'>¡Felicidades, ahora sabes lo singular que eres!</span>
+			</div>
+			<div id="ojo" class='circular'>
+				<!--<canvas id="mix-eye" width='500' height='500' class='circular'></canvas>-->
+				<img src="../usuarios_anteriores/ojo_usuario_1.png" class='circular'/>
+	  			<img src="../usuarios_anteriores/ojo_usuario_2.png" class='circular'/>
+	  			<img src="../usuarios_anteriores/ojo_usuario_3.png" class='circular'/>
+	  			<img src="../usuarios_anteriores/ojo_usuario_4.png" class='circular'/>
+			</div>
+			<!--<div id="loader-final"></div>-->
+			<img id='reiniciar' src="../assets_finales/reiniciar1.png">
+		</div>
+
+	</div>
+
+
+
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script src="../js/animsition.min.js"></script>
+<script type="text/javascript" src='../js/png.js'></script>
+<script type="text/javascript" src='../js/zlib.js'></script>
+
+<script src="../js/tracking/build/tracking-min.js"></script>
+<script type="text/javascript" src="../js/tracking/build/data/eye.js"></script>
+<script type="text/javascript" src="../js/tracking/build/data/face.js"></script>
+<script type="text/javascript" src="../js/serialPort.js"></script>
+<script type="text/javascript" src="../js/interact.min.js"></script>
+<script type="text/javascript" src="../js/TimeCircles.js"></script>
+<script type="text/javascript" src="../js/spriteCanvas.js"></script>
+
+<script type="text/javascript" src="../js/interaction.js"></script>
+
+</html>

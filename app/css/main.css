@@ -1,0 +1,910 @@
+ .rect {
+    border: 2px solid #a64ceb;
+    left: -1000px;
+    position: absolute;
+    top: -1000px;
+  }
+
+@font-face{
+ 	font-family: 'dani_boy4';
+ 	src: url('../fonts/TheMixB-W9Black.otf');
+ }
+
+@font-face{
+ 	font-family: 'dani_boy3';
+ 	src: url('../fonts/TheMixB-W7Bold.otf');
+ }
+
+ @font-face{
+ 	font-family: 'dani_boy2';
+ 	src: url('../fonts/TheMixB-W8ExtraBold.otf');
+ }
+ @font-face{
+ 	font-family: 'dani_boy1';
+ 	src: url('../fonts/ClubTypBlaStdIta.otf');
+ }
+ 
+.fuente1{
+	font-family: 'dani_boy1';
+	font-size: 15pt;
+	color: #1660B2;
+}
+
+.fuente2{
+	font-family: 'dani_boy2';
+	font-size: 2.7vw;
+	color: #1660B2;
+}
+
+.fuente3{
+	font-family: 'dani_boy2';
+	color: #1660B2;
+}
+.fuente5{
+	font-family: 'dani_boy2';
+	color: white;	
+}
+.f_titulo{
+	font-family: 'dani_boy1';
+	font-size: 95pt;
+	color: #1660B2;	
+}
+
+.f_subtitulo{
+	font-family: 'dani_boy2';
+	font-size: 40pt;
+	color: #1660B2;	
+}
+#pasa_aqui{
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	top: 63%;
+	font-family: 'dani_boy2';
+	font-size: 1.5vw;
+	color: #1660B2;		
+}
+#personaje-animado{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+}
+/******* GENERALES ********/
+
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	/*cursor: none !important;*/
+	-webkit-touch-callout: none; /* iOS Safari */
+  	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+  	-khtml-user-select: none;    /* Konqueror */
+  	-moz-user-select: none;      /* Firefox */
+  	-ms-user-select: none;       /* IE/Edge */
+  	user-select: none; 
+
+
+}
+html{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+img, canvas{
+	   -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+#main-content{
+	width: 100%;
+	height: 100%;
+}
+.screen{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0px;
+	z-index: 4;
+	/*--color: #F78181;*/
+	}
+#app-background{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0%;
+	left: 0%;
+	background-image: url('../assets_finales/fondo-parecidos.png'); 
+	background-size: cover;
+
+}
+#flash-background{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top: 0%;
+	left: 0%;
+	background-color: white;
+}
+.circular{
+
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	/*
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	*/
+}
+.circular2{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	/*
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	*/
+}
+
+#wrapper{
+	width: 100%;
+	height: 90%;
+}
+.cara-lateral{
+	margin: auto;
+	padding-bottom: 23%;
+}
+
+#black-background{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: black;
+	opacity: 0.85;
+	z-index: 4;
+
+}
+#black-background2{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: black;
+	opacity: 0.85;
+	z-index: 4;
+
+}
+#quieres-salir{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: black;
+	z-index: 4;
+}
+#salir{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%:
+	left: 0%;
+}
+
+#salir > span{
+	display: block;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin-top: 25%;
+	font-size: 2vw;
+	letter-spacing: 1px;
+}
+
+#eleccion{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 1.5%;
+	text-align: center;
+}
+#si{
+	width: 10.31%;
+	margin-right: 1%;
+
+}
+#no{
+	width: 10.31%;
+
+}
+.blur-background2{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: black;
+	opacity: 0.5;
+}
+.blur-background{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: black;
+	opacity: 0.5;
+}
+.blur-background > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-filter: blur(20px);
+}
+
+#svg-image-blur{
+	width: 100%;
+	height: 100%;
+}
+
+#svg-image{
+	width: 100%;
+	height: 100%;
+	filter:url(#blur-effect-1);
+	-webkit-filter: blur(10px);
+}
+
+
+
+#sigues-ahi{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+}
+#sigues-ahi > span{
+	position: relative;
+	display: block;
+}
+
+#timer1{
+	position: relative;
+	margin: auto;
+	display: block;
+	padding-top: 18%;
+}
+
+/********* PANTALLAS ********/
+
+
+#s-inicial{
+	
+}
+
+#titulo{
+	position: relative;
+	width: 52.60%;
+	height: auto;
+	margin: auto;
+	padding-top: 3%;
+}
+#titulo > img{
+	width: 100%;
+	height: 100%;
+}
+.icono-rfid{
+	position: relative;
+	top: 62%;
+	width: 6.04%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+	z-index: 2;
+	
+}
+.icono-rfid > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*--------------------------*/
+#s-elige{
+
+}
+
+.marco{
+	position: fixed;
+	z-index: 2;
+	
+}
+.seleccionable{
+}
+#barrita{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 7%;
+	margin-bottom: 5%;
+}
+#barrita > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#invita-text{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 12%;
+	margin-bottom: 7%;
+}
+#invita-text > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#flechita{
+	position: fixed;
+	left: 87%;
+	top: 48%;
+	width: 1.85%;
+}
+#concepto{
+
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	/*background-color: #FA5858;*/
+	background: url('../assets/overlay.png') no-repeat center center fixed;
+	opacity: 1;
+	z-index: 5;
+}
+
+#instruccion{
+	display: block;
+	position: relative;
+	width: 35.62%;
+	height: auto;
+	margin: auto;
+	top: 32.67%;
+	z-index: 1;
+}
+.blur-background{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	background-color: white;
+	opacity: 0.5;
+}
+	#concepto > p {
+		position: relative;
+		width: 100%;
+		height: 60%;
+		margin: 0px;
+		font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		padding-top: 4%;
+		font-size: 4.5em;
+		margin: 0px;
+		line-height: 90%;
+		text-align: center;
+	}
+	#continuar_1{
+		position: relative;
+		display: block;
+		margin: auto;
+		width: 10.26%;
+		height: auto;
+		top: 20%;
+		z-index: 2;
+	
+	}
+	#contenido{
+		width: 100%;
+		height: 100%;
+	}
+
+	.acomodo_cara{
+		margin:auto;
+	}
+		#hola{
+			/*float: left;*/
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			/*background-color: #A9F5A9;*/
+			margin: 0px;
+		}
+
+			#texto-elige{
+				width: 100%;
+				height: 14%;
+			}
+				#texto-elige > h2{
+					position: relative;
+					padding-top: 3%;
+					margin: 0px;
+					font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+					font-size: 2em;
+					margin: 0px;
+				}
+			#caras{
+				position: absolute;
+				width: 73.95%;
+				margin-left: 13.02%;
+				top: 21.85%;
+			}
+				#cara1{
+					float: left;
+					width: 42.82%;
+					height: 100%;
+					text-align: center;
+					/*background-color: blue;*/
+					
+				}
+					#face1{
+						width: 80%;
+						height: 66%;
+						
+					}
+					/*
+					#cara1 > h3{
+						position: relative;
+						padding-top: 10%;
+						margin: 0px;
+						font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+						font-size: 3em;
+						margin: 0px;
+					}*/
+
+				#plus-img{
+					position: relative;
+					float: left;
+					width: 6.93%;
+					height: auto;
+					margin-top: 18%;
+					margin-left: 3.6%;
+					margin-right: 3.6%;
+
+					/*background-color: green;*/
+				}
+				#plus-img > img{
+					display: block;
+					position: relative;
+					width: 100%;
+					margin: auto;
+				}
+				#cara2{
+					float: left;
+					width: 42.82%;
+					height: 100%;
+					text-align: center;
+					/*background-color: blue;*/
+				}
+					#face2{
+						width: 80%;
+						height: 66%;						
+					}
+					#face2 > img{
+						width: 100%;
+						height: 100%;
+					}
+					#cara2 > h3{
+						position: relative;
+						padding-top: 10%;
+						margin: 0px;
+						font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+						font-size: 3em;
+						margin: 0px;
+					}
+			#boton1{/* Boton continuar */
+				position: absolute;
+				width: 11%;
+				height: auto;
+				text-align: center;
+				top: 85%;
+				left: 69%;
+				/*background-color: red;*/
+			}
+			#boton1 > img{
+				width: 100%;
+				height: 100%;
+			}
+
+		#lista{
+			/*float: left;*/
+			position: fixed;
+			left: 91.5%;
+			width: 5%;
+			height: auto;
+			/*background-color: #A9D0F5;*/
+			margin: 0px;
+			vertical-align: top;
+			top: 15%;
+		}
+			.boton-terminar{
+				position: fixed;
+				display: block;
+				width: 3.43%;
+				height: auto;
+				top: 6%;
+				left: 93%;
+				z-index: 4;
+			}
+			.boton-terminar > img{
+				width: 100%;
+				height: 100%;
+			}
+			#lista-usuarios{
+				position: relative;
+				margin: auto;
+				width: 100%;
+				height: auto;
+				text-align: center;
+				/*background-color: black;*/
+			}
+			#lista-usuarios > span{
+				position: relative;
+				display: block;
+				width: 31%;
+				margin: auto;
+			}
+			#invita-amigo{
+				width: 100%;
+				height: 20%;
+				text-align: center;
+				/*background-color: yellow;*/
+			}
+				#scan-rfid{
+					display: block;
+					width: 52%;
+					height: auto;
+					margin: auto;
+				}
+				#scan-rfid > img{
+					width: 100%;
+					height: 100%;
+				}
+
+				#invita-amigo > h2{
+					position: relative;
+					padding-top: 3%;
+					margin: 0px;
+					font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+					font-size: 1.5em;
+					margin: 0px;
+				}
+
+#comparate-text{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-bottom: 15%;
+}
+
+#comparate-text > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*--------------------------*/
+
+/*--------------------------*/
+#s-zoom{
+	
+}
+	#inst5{
+		display: block;
+		position: relative;
+		top: 30%;
+		left: 5%;
+	}
+	#texto-usa{
+		width: 100%;
+		height: 17%;
+	}
+		#texto-usa > h2{
+			position: relative;
+			padding-top: 3%;
+			margin: 0px;
+			font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 2em;
+			margin: 0px;
+		}
+
+	.nombres{
+		position: absolute;
+		top: 16%;
+		width: 100%;
+		height: 5%;
+		margin: auto;
+	}
+	.nom1{
+		position: absolute;
+		display: inline-block;
+		width: 31.66%;
+		text-align: center;
+		margin: auto;
+		left: 13.02%;
+	}
+	.nom2{
+		position: absolute;
+		display: inline-block;
+		width: 31.66%;
+		text-align: center;
+		margin: auto;
+		left: 55.3%;
+	}
+	#interaccion{
+		width: 85%;
+		height: 77%;
+		margin: auto;
+	}
+		#ojos{
+			width: 100%;
+			height: 68%;
+		}
+			
+#ojoizq-wrap{
+position: absolute;
+margin: auto;
+left: 13.02%;
+overflow: hidden;
+
+}
+#canvas-izq{
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+#ojoder-wrap{
+position: absolute;
+margin: auto;
+left: 55.31%;
+overflow: hidden;
+}
+#canvas-der{
+position: absolute;
+width: 100%;
+height: 100%;
+}
+#inst4{
+width: 100%;
+height: 5%;
+text-align: center;
+margin-top: 6.5%;
+}
+#barra{
+position: absolute;
+display: block;
+width: 39.04%;
+
+left: 30.48%;
+top: 85.64%;
+}
+#terminar{
+position: absolute;
+display: block;
+width: 10.31%;
+height: auto;
+margin: auto;
+top: 89%;
+left: 71%;
+}
+
+#slider{
+position: absolute;
+width: 2.08%;
+top: 84.4%;
+left: 30.5%;
+-webkit-user-drag: element;
+user-drag: element;
+z-index: 2;
+}
+
+#toca_terminar{
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 92%;
+	text-align: center;
+
+}
+#toca_terminar > span{
+	font-size: 1.5vw;
+	color: #1660b2;
+}
+
+#manita{
+	position: absolute;
+	width: 3.64%;
+	left: 29.5%;
+	top: 86%;
+	z-index: 2;
+}
+/*--------------------------*/
+#s-final{
+	
+}
+
+	#texto-final{
+		width: 100%;
+		height: 20%;
+		text-align: center;
+		font-size: 150%;
+	}
+	#texto-final > span{
+		display: block;
+		position: relative;
+		padding-top: 3.5%;
+	}
+
+
+	#ojo{
+		position: absolute;
+		width: 100%;
+		height: 60%;
+		margin: auto;
+		top: 23.24%;
+		left: 34.16%;
+	}
+	#mix-eye{
+		position: relative;
+		display: block;
+		margin: auto;
+	}
+	#loader-final{
+		width: 100%;
+		height: 20%;
+	}
+/*--------------------------*/
+
+
+
+
+
+/* CIRCULOS TIMER */
+
+
+
+.time_circles {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+
+
+.time_circles > div {
+   position: absolute;
+   text-align: center;
+}
+
+.time_circles canvas{
+   position: absolute;
+   z-index: 1;
+   left: 0%;
+   top: 4%;
+}
+
+.time_circles > div > h4 {
+   margin: 0px;
+   padding: 0px;
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Century Gothic', Arial;
+}
+
+.time_circles > div > span {
+   display: block;
+   width: 100%;
+   text-align: center;
+   font-size: 300%;
+   margin-top: 0.45em;
+   font-weight: bold;
+   color:#FFF;
+}
+
+.textDiv_Seconds{
+       z-index: 1;
+}
+
+.circle {
+   border-radius: 60%;
+   width: 61%;
+   height: 61%;
+   top: 20%;
+   background-color: #333;
+   opacity: 0.7;
+   z-index: 0;
+   left:20%;
+}
+
+
+
+
+
+
+
+
+#ojo img{
+position: absolute;
+
+width: 100%;
+-webkit-animation-name: cf4FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 10s;
+-webkit-animation-direction: alternate;
+}
+
+
+@-webkit-keyframes cf4FadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#ojo img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+}
+#ojo img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+}
+#ojo img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+}
+#ojo img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+}
+
+
+
+
+#reiniciar{
+	position: absolute;
+	width: 10%;
+
+	left: 45%;
+	top: 85%;
+}
+
+
+
+
+
+
